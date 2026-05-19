@@ -86,15 +86,15 @@ Berikut adalah logika dan alur dari script `recon-auto.sh`:
 ##  Screenshot Hasil Eksekusi
 
 ### 1. Terminal Eksekusi
-<img width="1529" height="523" alt="running" src="https://github.com/user-attachments/assets/b31aab99-60ac-4099-a060-2e6dc1f7689f" />
-<img width="1597" height="636" alt="result" src="https://github.com/user-attachments/assets/33f9f64a-45ec-4c76-9499-d172423255eb" />
+<img width="700" alt="running" src="https://github.com/user-attachments/assets/b31aab99-60ac-4099-a060-2e6dc1f7689f" />
+<img width="700"  alt="result" src="https://github.com/user-attachments/assets/33f9f64a-45ec-4c76-9499-d172423255eb" />
 
 Proses Eksekusi Script 
 Alur Berjalan Sesuai Rencana: Script membaca file domains.txt dan mengeksekusi subfinder untuk setiap domain satu per satu. Setelah subfinder selesai, script melanjutkan ke tahap pengecekan live host dengan httpx.
 
 
 ### 2. Hasil Output `live.txt`
-<img width="1107" height="782" alt="live1" src="https://github.com/user-attachments/assets/a418fab8-fe5d-4a55-a7da-65e3b6257102" />
-<img width="1083" height="854" alt="live2" src="https://github.com/user-attachments/assets/d1071370-b837-4480-96f2-2d7777fd11bd" />
+<img width="700" alt="live1" src="https://github.com/user-attachments/assets/a418fab8-fe5d-4a55-a7da-65e3b6257102" />
+<img width="700" alt="live2" src="https://github.com/user-attachments/assets/d1071370-b837-4480-96f2-2d7777fd11bd" />
  
 Output dari httpx sangat rapi dan sesuai ekspektasi. Bisa melihat URL lengkap dengan http:// atau https://, diikuti oleh HTTP Status Code seperti [200], [302], [403], [404], dan judul halaman web.
