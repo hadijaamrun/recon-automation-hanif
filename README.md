@@ -96,5 +96,5 @@ Alur Berjalan Sesuai Rencana: Script membaca file domains.txt dan mengeksekusi s
 ### 2. Hasil Output `live.txt`
 <img width="1107" height="782" alt="live1" src="https://github.com/user-attachments/assets/a418fab8-fe5d-4a55-a7da-65e3b6257102" />
 <img width="1083" height="854" alt="live2" src="https://github.com/user-attachments/assets/d1071370-b837-4480-96f2-2d7777fd11bd" />
-
-Format Output: Output dari httpx sangat rapi dan sesuai ekspektasi. Kamu bisa melihat URL lengkap dengan http:// atau https://, diikuti oleh HTTP Status Code seperti [200], [302], [403], [404], dan judul halaman web.
+ 
+Output dari httpx sangat rapi dan sesuai ekspektasi. Bisa melihat URL lengkap dengan http:// atau https://, diikuti oleh HTTP Status Code seperti [200], [302], [403], [404], dan judul halaman web.
