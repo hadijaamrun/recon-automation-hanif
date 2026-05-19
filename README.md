@@ -6,7 +6,7 @@ Proyek ini adalah script Bash otomatisasi proses reconnaissance yang berjalan se
 ---
 
 ##  Setup Environment & Instalasi Tools
-Script ini dirancang untuk berjalan di sistem operasi **Kali Linux**. Berikut adalah langkah-langkah instalasi *environment* dan *tools* pendukung:
+Berikut adalah langkah-langkah instalasi *environment* dan *tools* pendukung:
 
 ### 1. Konfigurasi Go Environment (PATH)
 Pastikan direktori instalasi Go sudah masuk ke dalam PATH. Tambahkan konfigurasi berikut ke terminal:
@@ -20,12 +20,12 @@ source ~/.zshrc
 go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
 ```
 
-### 3. Install Subfinder dan HTTPX (via PDTM)
+### 3. Install Subfinder dan HTTPX 
 ```bash
 pdtm -i subfinder,httpx
 ```
 
-### 4. Install Anew (Deduplication Tool)
+### 4. Install Anew 
 ```bash
 go install -v github.com/tomnomnom/anew@latest
 ```
@@ -40,7 +40,7 @@ go install -v github.com/tomnomnom/anew@latest
    ```bash
    chmod +x scripts/recon-auto.sh
    ```
-3. Jalankan script dari direktori utama (root folder) proyek:
+3. Jalankan script dari direktori utama proyek:
    ```bash
    ./scripts/recon-auto.sh
    ```
