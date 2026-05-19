@@ -1,7 +1,7 @@
 ## Recon Automation
 
 ## Deskripsi Proyek
-Proyek ini adalah script Bash otomatisasi proses reconnaissance (recon) yang berjalan secara *end-to-end* tanpa error. Script ini mengintegrasikan 3 tools recon utama (**subfinder**, **httpx**, dan **anew**) ke dalam satu *pipeline* yang efisien. 
+Proyek ini adalah script Bash otomatisasi proses reconnaissance yang berjalan secara *end-to-end* tanpa error. Script ini mengintegrasikan 3 tools recon utama (**subfinder**, **httpx**, dan **anew**) ke dalam satu *pipeline* yang efisien. 
 
 ---
 
@@ -9,7 +9,7 @@ Proyek ini adalah script Bash otomatisasi proses reconnaissance (recon) yang ber
 Script ini dirancang untuk berjalan di sistem operasi **Kali Linux**. Berikut adalah langkah-langkah instalasi *environment* dan *tools* pendukung:
 
 ### 1. Konfigurasi Go Environment (PATH)
-Pastikan direktori instalasi Go sudah masuk ke dalam PATH. Tambahkan konfigurasi berikut ke terminal Anda:
+Pastikan direktori instalasi Go sudah masuk ke dalam PATH. Tambahkan konfigurasi berikut ke terminal:
 ```bash
 echo 'export PATH=$PATH:$HOME/go/bin' >> ~/.zshrc
 source ~/.zshrc
