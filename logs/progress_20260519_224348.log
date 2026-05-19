@@ -1,0 +1,25 @@
+[2026-05-19 22:43:48] Memulai proses Recon Automation...
+[2026-05-19 22:43:48] Sesi eksekusi: 20260519_224348
+[2026-05-19 22:43:48] Memulai enumerasi subdomain untuk domain di /home/hanurmaajid/recon-automation-hanif/input/domains.txt
+[2026-05-19 22:43:48] Menjalankan subfinder untuk: uber.com
+[2026-05-19 22:44:22] Selesai memproses domain: uber.com
+[2026-05-19 22:44:22] Menjalankan subfinder untuk: starbucks.com
+[2026-05-19 22:44:39] Selesai memproses domain: starbucks.com
+[2026-05-19 22:44:39] Menjalankan subfinder untuk: expressvpn.com
+[2026-05-19 22:45:11] Selesai memproses domain: expressvpn.com
+[2026-05-19 22:45:11] Menjalankan subfinder untuk: hackerone.com
+[2026-05-19 22:45:43] Selesai memproses domain: hackerone.com
+[2026-05-19 22:45:43] Menjalankan subfinder untuk: bugcrowd.com
+[2026-05-19 22:46:15] Selesai memproses domain: bugcrowd.com
+[2026-05-19 22:46:15] Menjalankan subfinder untuk: tesla.com
+[2026-05-19 22:46:41] Selesai memproses domain: tesla.com
+[2026-05-19 22:46:41] Menjalankan subfinder untuk: redbull.com
+[2026-05-19 22:46:58] Selesai memproses domain: redbull.com
+[2026-05-19 22:46:58] Memulai pengecekan live hosts menggunakan httpx...
+[2026-05-19 22:55:29] ==========================================
+[2026-05-19 22:55:29] Recon Selesai!
+[2026-05-19 22:55:29] Total Subdomain Unik Ditemukan : 6746
+[2026-05-19 22:55:29] Total Live Hosts Aktif         : 2149
+[2026-05-19 22:55:29] File All Subdomains disimpan di: /home/hanurmaajid/recon-automation-hanif/output/all-subdomains_20260519_224348.txt
+[2026-05-19 22:55:30] File Live Hosts disimpan di    : /home/hanurmaajid/recon-automation-hanif/output/live_20260519_224348.txt
+[2026-05-19 22:55:30] ==========================================

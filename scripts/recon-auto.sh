@@ -4,7 +4,7 @@
 # Recon Automation Script by Hanif
 # ==========================================
 
-# Membuat Timestamp untuk nama file yang unik (Format: TahunBulanTanggal_JamMenitDetik)
+# Membuat Timestamp untuk nama file yang unik
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 
 # Definisi Path 
@@ -56,7 +56,7 @@ log_progress "Memulai pengecekan live hosts menggunakan httpx..."
 
 # httpx dengan flag -sc dan -title
 # anew digunakan untuk mencegah duplikasi hasil live hosts
-cat "$OUTPUT_ALL" | httpx -sc -title -silent 2>>"$LOG_ERR" | anew "$OUTPUT_LIVE" > /dev/null
+cat "$OUTPUT_ALL" | httpx -t 100  -sc -title -silent 2>>"$LOG_ERR" | anew "$OUTPUT_LIVE" > /dev/null
 
 # 5. Hasil Akhir
 TOTAL_SUB=$(wc -l < "$OUTPUT_ALL" 2>/dev/null || echo "0")

@@ -1,7 +1,7 @@
-tesla.com
 uber.com
-yahoo.com
 starbucks.com
-netflix.com
 expressvpn.com
-tiktok.com
+hackerone.com
+bugcrowd.com
+tesla.com
+redbull.com
