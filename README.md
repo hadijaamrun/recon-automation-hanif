@@ -71,15 +71,15 @@ https://xlb.uber.com [302] [302 Found]
 
 ---
 
-##  Penjelasan Singkat Bagian Kode
+##  Penjelasan Bagian Kode
 
 Berikut adalah logika dan alur dari script `recon-auto.sh`:
 
 * **Pembuatan Timestamp:** Menggunakan `date +"%Y%m%d_%H%M%S"` untuk menghasilkan penamaan file output dan log yang dinamis dan unik setiap kali script dijalankan.
-* **Logging System:** Fungsi `log_progress` menggunakan kombinasi `echo` (untuk menampilkan *output* di layar dengan penambahan penanda waktu) dan `tee -a` (untuk menyalin *output* layar tersebut ke dalam file log secara permanen).
-* **Validasi Tools & Input:** Menggunakan `command -v` untuk memastikan semua tool (subfinder, httpx, anew) tersedia, dan memeriksa keberadaan file `domains.txt`. Jika gagal, script otomatis berhenti (`exit 1`).
-* **Subfinder (Enumerasi) & Anew:** Membaca target per baris (looping). Subfinder mencari subdomain, lalu error di-*redirect* ke `errors.log` (`2>>`). Hasil output di-*pipe* (`|`) ke `anew` untuk memastikan hanya subdomain unik yang disimpan.
-* **HTTPX (Live Host Filter):** Membaca hasil subdomain, lalu HTTPX mencari host yang aktif dengan menambahkan argumen `-sc` (Status Code) dan `-title`. Hasilnya kembali disaring menggunakan `anew` ke file *output live*.
+* **Logging System:** Fungsi `log_progress` menggunakan kombinasi `echo` untuk menampilkan *output* di layar dengan penambahan penanda waktu dan `tee -a` untuk menyalin *output* layar tersebut ke dalam file log secara permanen.
+* **Validasi Tools & Input:** Menggunakan `command -v` untuk memastikan semua tool tersedia, dan memeriksa keberadaan file `domains.txt`. Jika gagal, script otomatis berhenti (`exit 1`).
+* **Subfinder & Anew:** Membaca target per baris. Subfinder mencari subdomain, lalu error di-*redirect* ke `errors.log` (`2>>`). Hasil output di-*pipe* (`|`) ke `anew` untuk memastikan hanya subdomain unik yang disimpan.
+* **HTTPX :** Membaca hasil subdomain dari output sebelumnya, lalu menggunakan perintah `cat "$OUTPUT_ALL" | httpx -t 100 -sc -title -silent 2>>"$LOG_ERR" | anew "$OUTPUT_LIVE" > /dev/null` untuk mencari host yang aktif. Argumen `-t 100` ditambahkan untuk menjalankan 100 *threads* secara paralel sehingga proses pengecekan ratusan/ribuan host berjalan jauh lebih cepat. Argumen `-sc` (Status Code) dan `-title` digunakan untuk menangkap informasi detail halaman, lalu hasilnya disaring kembali menggunakan `anew` agar output di `live.txt` bersih dari duplikasi.
 
 ---
 
