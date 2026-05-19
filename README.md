@@ -1,4 +1,4 @@
-## Recon Automation Pipeline
+## Recon Automation
 
 ## Deskripsi Proyek
 Proyek ini adalah script Bash otomatisasi proses reconnaissance (recon) yang berjalan secara *end-to-end* tanpa error. Script ini mengintegrasikan 3 tools recon utama (**subfinder**, **httpx**, dan **anew**) ke dalam satu *pipeline* yang efisien. 
@@ -86,10 +86,15 @@ Berikut adalah logika dan alur dari script `recon-auto.sh`:
 ##  Screenshot Hasil Eksekusi
 
 ### 1. Terminal Eksekusi
-<img width="1918" height="959" alt="running" src="https://github.com/user-attachments/assets/98c9f557-1265-497f-b05f-2771694e738c" />
-<img width="1918" height="959" alt="result" src="https://github.com/user-attachments/assets/dd4bcb4a-c786-4452-92e6-1ebb7ad77460" />
+<img width="1529" height="523" alt="running" src="https://github.com/user-attachments/assets/b31aab99-60ac-4099-a060-2e6dc1f7689f" />
+<img width="1597" height="636" alt="result" src="https://github.com/user-attachments/assets/33f9f64a-45ec-4c76-9499-d172423255eb" />
+
+Proses Eksekusi Script 
+Alur Berjalan Sesuai Rencana: Script membaca file domains.txt dan mengeksekusi subfinder untuk setiap domain satu per satu. Setelah subfinder selesai, script melanjutkan ke tahap pengecekan live host dengan httpx.
 
 
 ### 2. Hasil Output `live.txt`
-<img width="1918" height="959" alt="live1" src="https://github.com/user-attachments/assets/3cc645bf-d0d2-49f2-a053-02811d5b7b93" />
-<img width="1918" height="959" alt="live2" src="https://github.com/user-attachments/assets/b7c518ab-b01a-4dd2-babf-4e9c9f1eacb7" />
+<img width="1107" height="782" alt="live1" src="https://github.com/user-attachments/assets/a418fab8-fe5d-4a55-a7da-65e3b6257102" />
+<img width="1083" height="854" alt="live2" src="https://github.com/user-attachments/assets/d1071370-b837-4480-96f2-2d7777fd11bd" />
+
+Format Output: Output dari httpx sangat rapi dan sesuai ekspektasi. Kamu bisa melihat URL lengkap dengan http:// atau https://, diikuti oleh HTTP Status Code seperti [200], [302], [403], [404], dan judul halaman web.
